@@ -560,11 +560,14 @@ body.animations-ready .reveal-section.is-visible .service-grid .reveal-item:nth-
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+  align-items: stretch;
 }
 
 .service-card,
 .work-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 260px;
   padding: 28px;
   border: 1px solid var(--line);
@@ -572,6 +575,10 @@ body.animations-ready .reveal-section.is-visible .service-grid .reveal-item:nth-
   background: var(--white);
   box-shadow: 0 16px 44px rgba(8, 27, 58, 0.08);
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.works-grid .work-card {
+  min-height: 300px;
 }
 
 .service-card::before {
@@ -611,7 +618,6 @@ body.animations-ready .reveal-section.is-visible .service-grid .reveal-item:nth-
 }
 
 .feature-card {
-  grid-column: span 2;
   color: var(--white);
   background: var(--blue-900);
 }
